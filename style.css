@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=PT+Sans+Narrow:wght@700&display=swap');
+body{
+    background-color: #35426f;
+}
+div#somos{
+    position: absolute;
+    width: 280px;
+    text-align: justify;
+    background-color: #7cdddb;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Dosis', sans-serif;
+}
+img#logo{
+    position: absolute;
+    bottom: 470px;
+    left: 1180px;
+    width: 150px;
+    height: 130px;
+    border-radius: 20px;
+}
+ul#nav{
+    list-style: none;
+    background-color: #01114a;
+    height: 70px;
+    border-bottom: dashed rgba(255, 255, 255, 0.644);
+}
+li#li01{
+    display: inline;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+li#li02{
+    display: inline;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+li#li03{
+    display: inline;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+li#li04{
+    display: inline;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+li#li05{
+    display: inline;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+a#iniciolink:link,a:visited{
+    text-decoration: none;
+    color: black
+}
+a#iniciolink:hover{
+	text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+a#iniciolink:active{
+    text-decoration: none
+}
+a#notalink:link,a:visited{
+    text-decoration: none;
+    color: black
+}
+a#notalink:hover{
+	text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+a#notalink:active{
+    text-decoration: none
+}
+a#medialink:link,a:visited{
+    text-decoration: none;
+    color: black
+}
+a#medialink:hover{
+    text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+a#medialink:active{
+    text-decoration: none
+}
+a#cadastrolink:link,a:visited{
+    text-decoration: none;
+    color: black
+}
+a#cadastrolink:hover{
+    text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+a#cadastrolink:active{
+    text-decoration: none;
+    color: black
+}
+a#desempenholink:link,a:visited{
+    text-decoration: none
+}
+a#desempenholink:hover{
+    text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: 0.2s;
+}
+a#desempenholink:active{
+    text-decoration: none
+}
+.box{
+    width: 300px;
+    height: 400px;
+    padding: 40px;
+    position: absolute;
+    left: 60%;
+    bottom: 35%;
+    transform: translate(-50%,50%); 
+    background: #191919;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box input[type="text"],.box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+.box input[type='submit']{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+    background: #2ecc71;
+}
+h2#t2{
+position: absolute;
+left: 620px;
+bottom: 460px;
+}
+div#notas{
+    margin-top: 590px;
+    text-align: center;
+}
+div#medias{
+    margin-top: 50px;
+    text-align: center;
+}
+div#desempenho{
+    margin-top: 50px;
+    text-align: center;
+}
+div#notas{
+    text-align: center;
+    border-top: dashed rgba(255, 255, 255, 0.644);
+}
+b#b11{
+    margin-left: 102px;
+}
+div#notas b:hover{
+    background-color: rgba(0, 0, 0, 0.452);
+    cursor: pointer;
+}
+div#informacoes{
+    background-color: rgba(0, 0, 0, 0.397);
+    text-align: justify;
+    position: relative;
+    width: 196px;
+    padding: 8px;
+    left: 1100px;
+    bottom: 300px;
+    margin: 0px;
+}
+input#botao{
+    position: relative;
+    bottom: 140px;
+}
+table#tabelaspec td{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #7cdddb;
+}
+table#tabelaspec{
+    margin-left: 395px;
+    position: relative;
+}
+div#medias{
+    position: relative;
+    bottom: 150px;
+}
+div#nmat{
+position: absolute;
+left: 400px;
+}
+
+
