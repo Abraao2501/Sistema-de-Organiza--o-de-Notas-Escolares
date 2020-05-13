@@ -1,3 +1,4 @@
+var mediageral = []
 function matematica() {
 
     var txtmat = [document.getElementById("m1"), document.getElementById("m2"), document.getElementById("m3")]
@@ -5,6 +6,8 @@ function matematica() {
     var mat = [(Number(txtmat[0].value)), (Number(txtmat[1].value)), (Number(txtmat[2].value))]
 
     let media = (mat[0] + mat[1] + mat[2]) / 3
+
+    mediageral.push(media)
 
     let divmedia = document.getElementById("mediam")
 
@@ -28,6 +31,8 @@ function portugues() {
 
     let media = (port[0] + port[1] + port[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediap")
 
     if (txtport[0].value == 0 || txtport[1].value == 0 || txtport[2].value == 0) {
@@ -50,6 +55,8 @@ function biologia() {
 
     let media = (bio[0] + bio[1] + bio[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediab")
 
     if (txtbio[0].value == 0 || txtbio[1].value == 0 || txtbio[2].value == 0) {
@@ -70,6 +77,8 @@ function geografia() {
     var geo = [(Number(txtgeo[0].value)), (Number(txtgeo[1].value)), (Number(txtgeo[2].value))]
 
     let media = (geo[0] + geo[1] + geo[2]) / 3
+
+    mediageral.push(media)
 
     let divmedia = document.getElementById("mediag")
 
@@ -92,6 +101,8 @@ function historia() {
 
     let media = (his[0] + his[1] + his[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediah")
 
     if (txthis[0].value == 0 || txthis[1].value == 0 || txthis[2].value == 0) {
@@ -111,6 +122,8 @@ function ingles() {
     var ing = [(Number(txting[0].value)), (Number(txting[1].value)), (Number(txting[2].value))]
 
     let media = (ing[0] + ing[1] + ing[2]) / 3
+
+    mediageral.push(media)
 
     let divmedia = document.getElementById("mediai")
 
@@ -133,6 +146,8 @@ function espanhol() {
 
     let media = (esp[0] + esp[1] + esp[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediae")
 
     if (txtesp[0].value == 0 || txtesp[1].value == 0 || txtesp[2].value == 0) {
@@ -153,6 +168,8 @@ function fisica() {
     var fis = [(Number(txtfis[0].value)), (Number(txtfis[1].value)), (Number(txtfis[2].value))]
 
     let media = (fis[0] + fis[1] + fis[2]) / 3
+
+    mediageral.push(media)
 
     let divmedia = document.getElementById("mediaf")
 
@@ -175,6 +192,8 @@ function quimica() {
 
     let media = (qui[0] + qui[1] + qui[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediaq")
 
     if (txtqui[0].value == 0 || txtqui[1].value == 0 || txtqui[2].value == 0) {
@@ -195,6 +214,8 @@ function sistemasoperacionais() {
     var so = [(Number(txtso[0].value)), (Number(txtso[1].value)), (Number(txtso[2].value))]
 
     let media = (so[0] + so[1] + so[2]) / 3
+
+    mediageral.push(media)
 
     let divmedia = document.getElementById("mediasis")
 
@@ -217,6 +238,8 @@ function programacaoweb() {
 
     let media = (pw[0] + pw[1] + pw[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediapw")
 
     if (txtpw[0].value == 0 || txtpw[1].value == 0 || txtpw[2].value == 0) {
@@ -238,6 +261,8 @@ function robotica() {
 
     let media = (r[0] + r[1] + r[2]) / 3
 
+    mediageral.push(media)
+
     let divmedia = document.getElementById("mediar")
 
     if (txtr[0].value == 0 || txtr[1].value == 0 || txtr[2].value == 0) {
@@ -251,4 +276,7 @@ function robotica() {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('rob').style.backgroundColor = '#ff4040'
     }
+}
+function testmedia(){
+    alert(`${mediageral}`)
 }
