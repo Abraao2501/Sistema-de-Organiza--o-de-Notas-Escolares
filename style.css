@@ -223,19 +223,16 @@ div#notas{
 b#b11{
     margin-left: 102px;
 }
-div#notas b:hover{
-    background-color: rgba(0, 0, 0, 0.452);
-    cursor: pointer;
-}
 div#informacoes{
     background-color: rgba(0, 0, 0, 0.397);
     text-align: justify;
-    position: relative;
+    position: absolute;
     width: 196px;
     padding: 8px;
+    top: 800px;
     left: 1100px;
-    bottom: 300px;
     margin: 0px;
+    margin-left: 15px;
 }
 input#botao{
     position: relative;
@@ -258,5 +255,18 @@ div#nmat{
 position: absolute;
 left: 400px;
 }
-
-
+input#btlmedias{
+    position: relative;
+    left: 580px;
+    width: 180px;
+    padding: 5px;
+}
+input#btlmedias:hover{
+    transition: 0.4s;
+    text-align: center;
+    transform: scale(1.2);
+}
+.efeito:hover{
+    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.233);
+}

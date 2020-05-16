@@ -11,7 +11,7 @@ function matematica() {
 
     let divmedia = document.getElementById("mediam")
 
-    if (txtmat[0].value == 0 || txtmat[1].value == 0 || txtmat[2].value == 0) {
+    if (txtmat[0].value.length == 0 || txtmat[1].value.length == 0 || txtmat[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('mat').style.backgroundColor = '#ff860b'
     }
@@ -35,7 +35,7 @@ function portugues() {
 
     let divmedia = document.getElementById("mediap")
 
-    if (txtport[0].value == 0 || txtport[1].value == 0 || txtport[2].value == 0) {
+    if (txtport[0].value.length == 0 || txtport[1].value.length == 0 || txtport[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('port').style.backgroundColor = '#ff860b'
     }
@@ -59,7 +59,7 @@ function biologia() {
 
     let divmedia = document.getElementById("mediab")
 
-    if (txtbio[0].value == 0 || txtbio[1].value == 0 || txtbio[2].value == 0) {
+    if (txtbio[0].value.length == 0 || txtbio[1].value.length == 0 || txtbio[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('bio').style.backgroundColor = '#ff860b'
     }
@@ -82,7 +82,7 @@ function geografia() {
 
     let divmedia = document.getElementById("mediag")
 
-    if (txtgeo[0].value == 0 || txtgeo[1].value == 0 || txtgeo[2].value == 0) {
+    if (txtgeo[0].value.length == 0 || txtgeo[1].value.length == 0 || txtgeo[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('geo').style.backgroundColor = '#ff860b'
     }
@@ -105,7 +105,7 @@ function historia() {
 
     let divmedia = document.getElementById("mediah")
 
-    if (txthis[0].value == 0 || txthis[1].value == 0 || txthis[2].value == 0) {
+    if (txthis[0].value.length == 0 || txthis[1].value.length == 0 || txthis[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('his').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -127,7 +127,7 @@ function ingles() {
 
     let divmedia = document.getElementById("mediai")
 
-    if (txting[0].value == 0 || txting[1].value == 0 || txting[2].value == 0) {
+    if (txting[0].value.length == 0 || txting[1].value.length == 0 || txting[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('ing').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -150,7 +150,7 @@ function espanhol() {
 
     let divmedia = document.getElementById("mediae")
 
-    if (txtesp[0].value == 0 || txtesp[1].value == 0 || txtesp[2].value == 0) {
+    if (txtesp[0].value.length == 0 || txtesp[1].value.length == 0 || txtesp[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('esp').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -173,7 +173,7 @@ function fisica() {
 
     let divmedia = document.getElementById("mediaf")
 
-    if (txtfis[0].value == 0 || txtfis[1].value == 0 || txtfis[2].value == 0) {
+    if (txtfis[0].value.length == 0 || txtfis[1].value.length == 0 || txtfis[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('fis').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -196,7 +196,7 @@ function quimica() {
 
     let divmedia = document.getElementById("mediaq")
 
-    if (txtqui[0].value == 0 || txtqui[1].value == 0 || txtqui[2].value == 0) {
+    if (txtqui[0].value.length == 0 || txtqui[1].value.length == 0 || txtqui[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('qui').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -219,7 +219,7 @@ function sistemasoperacionais() {
 
     let divmedia = document.getElementById("mediasis")
 
-    if (txtso[0].value == 0 || txtso[1].value == 0 || txtso[2].value == 0) {
+    if (txtso[0].value.length == 0 || txtso[1].value.length == 0 || txtso[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('sis').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -242,7 +242,7 @@ function programacaoweb() {
 
     let divmedia = document.getElementById("mediapw")
 
-    if (txtpw[0].value == 0 || txtpw[1].value == 0 || txtpw[2].value == 0) {
+    if (txtpw[0].value.length == 0 || txtpw[1].value.length == 0 || txtpw[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('pw').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -265,7 +265,7 @@ function robotica() {
 
     let divmedia = document.getElementById("mediar")
 
-    if (txtr[0].value == 0 || txtr[1].value == 0 || txtr[2].value == 0) {
+    if (txtr[0].value.length == 0 || txtr[1].value.length == 0 || txtr[2].value.length == 0) {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('rob').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
@@ -278,5 +278,24 @@ function robotica() {
     }
 }
 function testmedia(){
-    alert(`${mediageral}`)
+    if(typeof mediageral[1,2,3,4,5,6,7,8,9,10,11] == 'undefined'){
+        alert('erro')
+    }
+    else{
+    alert(mediageral)
+    let dadoTabela = document.getElementById('valorgeral')
+    var total = 0
+for(var i = 0; i < mediageral.length; i++) {
+    total += mediageral[i]
+}
+    var avg = total / mediageral.length
+    var teste = document.getElementById('teste')
+    teste.innerHTML = `Sua média geral é : ${avg.toFixed(2)}`
+    if(avg<6){
+        teste.style.backgroundColor = 'red'
+    }
+    else{
+        teste.style.backgroundColor = 'green'
+    }
+}
 }
