@@ -1,6 +1,11 @@
 var mediageral = []
+var dados = []
+function info(){
+    let nome = document.getElementById('nome')
+    let serie = document.getElementById('serie')
+    dados.push(nome, serie)
+}
 function matematica() {
-
     var txtmat = [document.getElementById("m1"), document.getElementById("m2"), document.getElementById("m3")]
 
     var mat = [(Number(txtmat[0].value)), (Number(txtmat[1].value)), (Number(txtmat[2].value))]
@@ -278,24 +283,26 @@ function robotica() {
     }
 }
 function testmedia(){
-    if(typeof mediageral[1,2,3,4,5,6,7,8,9,10,11] == 'undefined'){
-        alert('erro')
+    if(typeof mediageral[1,2,3,4,5,6,7,8,9,10,11] == 'undefined' || serie.value < 1){
+        alert('Erro, verifique as informações!')
     }
     else{
     alert(mediageral)
     let dadoTabela = document.getElementById('valorgeral')
     var total = 0
-for(var i = 0; i < mediageral.length; i++) {
+    for(var i = 0; i < mediageral.length; i++) {
     total += mediageral[i]
 }
     var avg = total / mediageral.length
     var teste = document.getElementById('teste')
-    teste.innerHTML = `Sua média geral é : ${avg.toFixed(2)}`
     if(avg<6){
-        teste.style.backgroundColor = 'red'
+        teste.innerHTML = `Você deve se esforçar mais ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
+        teste.style.backgroundColor = 'rgba(211, 52, 52, 0.856)'
     }
     else{
+        teste.innerHTML = `Parabéns ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
         teste.style.backgroundColor = 'green'
     }
 }
+mediageral.length=0
 }
