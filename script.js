@@ -5,8 +5,6 @@ function info() {
     let serie = document.getElementById('serie')
     dados.push(nome, serie)
 }
-var selecionarmat = document.getElementById('m')
-selecionarmat.addEventListener('click',
     function matematica() {
         var txtmat = [document.getElementById("m1"), document.getElementById("m2"), document.getElementById("m3")]
 
@@ -24,21 +22,25 @@ selecionarmat.addEventListener('click',
             divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
             let quadrogreen = document.getElementById('mat').style.backgroundColor = '#3eff42'
 
-            var elementopai = document.getElementById("mediam")
-            var botao = document.createElement('button')
-            botao.textContent = "Guardar Média"
-            elementopai.appendChild(botao)
-
-            function guardarmedia(){mediageral.push(media)}
-
+            let sel = document.getElementById("mediam")
+            let botaomat = document.createElement('button')
+            botaomat.textContent = "Guardar Média" //Estiliza esses botões pelo CSS
+            sel.appendChild(botaomat)
+            function guardarmedia() { mediageral.push(media) }
             botao.addEventListener('click', guardarmedia)
 
         } else {
-            divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+            divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
             let quadrored = document.getElementById('mat').style.backgroundColor = '#ff4040'
-            mediageral.push(media)
+
+            let sel = document.getElementById("mediam")
+            let botaomat = document.createElement('button')
+            botaomat.textContent = "Guardar Média"
+            sel.appendChild(botaomat)
+            function guardarmedia() { mediageral.push(media) }
+            botaomat.addEventListener('click', guardarmedia)
         }
-    })
+}
 function portugues() {
 
     var txtport = [document.getElementById("p1"), document.getElementById("p2"), document.getElementById("p3")]
@@ -56,11 +58,24 @@ function portugues() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('port').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+
+        let sel = document.getElementById("mediap")
+        let botaoport = document.createElement('button')
+        botaoport.textContent = "Guardar Média"
+        sel.appendChild(botaoport)
+        function guardarmedia() { mediageral.push(media) }
+        botaoport.addEventListener('click', guardarmedia)
+
     } else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('port').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediap")
+        let botaoport = document.createElement('button')
+        botaoport.textContent = "Guardar Média"
+        sel.appendChild(botaoport)
+        function guardarmedia() { mediageral.push(media) }
+        botaoport.addEventListener('click', guardarmedia)
     }
 
 }
@@ -81,11 +96,24 @@ function biologia() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('bio').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediab")
+        let botaobio = document.createElement('button')
+        botaobio.textContent = "Guardar Média"
+        sel.appendChild(botaobio)
+        function guardarmedia() { mediageral.push(media) }
+        botaobio.addEventListener('click', guardarmedia)
+
     } else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('bio').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+
+        let sel = document.getElementById("mediab")
+        let botaobio = document.createElement('button')
+        botaobio.textContent = "Guardar Média"
+        sel.appendChild(botaobio)
+        function guardarmedia() { mediageral.push(media)}
+        botaobio.addEventListener('click', guardarmedia)
     }
 }
 function geografia() {
@@ -104,11 +132,25 @@ function geografia() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('geo').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediag")
+        let botaogeo = document.createElement('button')
+        botaogeo.textContent = "Guardar Média"
+        sel.appendChild(botaogeo)
+        function guardarmedia() { mediageral.push(media) }
+        botaogeo.addEventListener('click', guardarmedia)
+
+
     } else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('geo').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediag")
+        let botaogeo = document.createElement('button')
+        botaogeo.textContent = "Guardar Média"
+        sel.appendChild(botaogeo)
+        function guardarmedia() { mediageral.push(media) }
+        botaogeo.addEventListener('click', guardarmedia)
     }
 }
 function historia() {
@@ -126,12 +168,25 @@ function historia() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('his').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediah")
+        let botaohis = document.createElement('button')
+        botaohis.textContent = "Guardar Média"
+        sel.appendChild(botaohis)
+        function guardarmedia() { mediageral.push(media) }
+        botaohis.addEventListener('click', guardarmedia)
 
     } else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('his').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediah")
+        let botaohis = document.createElement('button')
+        botaohis.textContent = "Guardar Média"
+        sel.appendChild(botaohis)
+        function guardarmedia() { mediageral.push(media) }
+        botaohis.addEventListener('click', guardarmedia)
+
     }
 }
 function ingles() {
@@ -149,12 +204,26 @@ function ingles() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('ing').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediai")
+        let botaoing = document.createElement('button')
+        botaoing.textContent = "Guardar Média"
+        sel.appendChild(botaoing)
+        function guardarmedia() { mediageral.push(media) }
+        botaoing.addEventListener('click', guardarmedia)
+
     }
     else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('ing').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediai")
+        let botaoing = document.createElement('button')
+        botaoing.textContent = "Guardar Média"
+        sel.appendChild(botaoing)
+        function guardarmedia() { mediageral.push(media) }
+        botaoing.addEventListener('click', guardarmedia)
+
     }
 }
 function espanhol() {
@@ -170,14 +239,28 @@ function espanhol() {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('esp').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
         let quadrogreen = document.getElementById('esp').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediae")
+        let botaoesp = document.createElement('button')
+        botaoesp.textContent = "Guardar Média"
+        sel.appendChild(botaoesp)
+        function guardarmedia() { mediageral.push(media) }
+        botaoesp.addEventListener('click', guardarmedia)
+
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('esp').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediae")
+        let botaoesp = document.createElement('button')
+        botaoesp.textContent = "Guardar Média"
+        sel.appendChild(botaoesp)
+        function guardarmedia() { mediageral.push(media) }
+        botaoesp.addEventListener('click', guardarmedia)
+
     }
 }
 function fisica() {
@@ -193,14 +276,27 @@ function fisica() {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('fis').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
         let quadrogreen = document.getElementById('fis').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+
+        let sel = document.getElementById("mediaf")
+        let botaofis = document.createElement('button')
+        botaofis.textContent = "Guardar Média"
+        sel.appendChild(botaofis)
+        function guardarmedia() { mediageral.push(media) }
+        botaofis.addEventListener('click', guardarmedia)
     }
     else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('fis').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediaf")
+        let botaofis = document.createElement('button')
+        botaofis.textContent = "Guardar Média"
+        sel.appendChild(botaofis)
+        function guardarmedia() { mediageral.push(media) }
+        botaofis.addEventListener('click', guardarmedia)
+
     }
 }
 function quimica() {
@@ -216,14 +312,28 @@ function quimica() {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('qui').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
         let quadrogreen = document.getElementById('qui').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediaq")
+        let botaoqui = document.createElement('button')
+        botaoqui.textContent = "Guardar Média"
+        sel.appendChild(botaoqui)
+        function guardarmedia() { mediageral.push(media) }
+        botaoqui.addEventListener('click', guardarmedia)
+
     }
     else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('qui').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediaq")
+        let botaoqui = document.createElement('button')
+        botaoqui.textContent = "Guardar Média"
+        sel.appendChild(botaoqui)
+        function guardarmedia() { mediageral.push(media) }
+        botaoqui.addEventListener('click', guardarmedia)
+
     }
 }
 function sistemasoperacionais() {
@@ -241,12 +351,25 @@ function sistemasoperacionais() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('sis').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+
+        let sel = document.getElementById("mediasis")
+        let botaoso = document.createElement('button')
+        botaoso.textContent = "Guardar Média"
+        sel.appendChild(botaoso)
+        function guardarmedia() { mediageral.push(media) }
+        botaoso.addEventListener('click', guardarmedia)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('sis').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediasis")
+        let botaoso = document.createElement('button')
+        botaoso.textContent = "Guardar Média"
+        sel.appendChild(botaoso)
+        function guardarmedia() { mediageral.push(media) }
+        botaoso.addEventListener('click', guardarmedia)
+
     }
 }
 function programacaoweb() {
@@ -262,14 +385,28 @@ function programacaoweb() {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('pw').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
         let quadrogreen = document.getElementById('pw').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediapw")
+        let botaopw = document.createElement('button')
+        botaopw.textContent = "Guardar Média"
+        sel.appendChild(botaopw)
+        function guardarmedia() { mediageral.push(media) }
+        botaopw.addEventListener('click', guardarmedia)
+
     }
     else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('pw').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediapw")
+        let botaopw = document.createElement('button')
+        botaopw.textContent = "Guardar Média"
+        sel.appendChild(botaopw)
+        function guardarmedia() { mediageral.push(media) }
+        botaopw.addEventListener('click', guardarmedia)
+
     }
 }
 function robotica() {
@@ -285,14 +422,28 @@ function robotica() {
         divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
         let quadroorange = document.getElementById('rob').style.backgroundColor = '#ff860b'
     } else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
         let quadrogreen = document.getElementById('rob').style.backgroundColor = '#3eff42'
-        mediageral.push(media)
+        
+        let sel = document.getElementById("mediar")
+        let botaorob = document.createElement('button')
+        botaorob.textContent = "Guardar Média"
+        sel.appendChild(botaorob)
+        function guardarmedia() { mediageral.push(media) }
+        botaorob.addEventListener('click', guardarmedia)
+
     }
     else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(    `
         let quadrored = document.getElementById('rob').style.backgroundColor = '#ff4040'
-        mediageral.push(media)
+       
+        let sel = document.getElementById("mediar")
+        let botaorob = document.createElement('button')
+        botaorob.textContent = "Guardar Média"
+        sel.appendChild(botaorob)
+        function guardarmedia() { mediageral.push(media) }
+        botaorob.addEventListener('click', guardarmedia)
+
     }
 }
 function testmedia() {
