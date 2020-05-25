@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Sistema de Notas Online</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!--Teste de permissão para commit-->
+
 <body>
     <nav>
         <ul id="nav">
@@ -57,110 +57,161 @@
     </div>
     <div id="notas">
         <p id="titlenotas"> NOTAS </p>
-        <div id="mat" class="efeito"><p></p>
-        <br><b id="b0">MATEMÁTICA:</b> AP1: <input class="caixas" type="number" id="m1"> AP2: <input type="number" class="caixas" id="m2"> AP3: <input
-            type="number" class="caixas" id="m3"><input type="button" value="Calcular" onclick="matematica()">
-        <p>
-            <div id="mediam" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
-        <div id="port" class="efeito"><p></p>
-        <br><b id="b1">&nbsp;&nbsp;&nbsp;&nbsp;PORTUGUÊS:</b> AP1: <input type="number" class="caixas" class="caixas" id="p1"> AP2: <input
-            type="number" class="caixas" id="p2"> AP3: <input type="number" class="caixas" id="p3"><input type="button" value="Calcular"
-            onclick="portugues()">
-        <p>
-            <div id="mediap" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="mat" class="efeito">
+            <p></p>
+            <br><b id="b0">MATEMÁTICA:</b> AP1: <input class="caixas" type="number" id="m1"> AP2: <input type="number"
+                class="caixas" id="m2"> AP3: <input type="number" class="caixas" id="m3"><input type="button"
+                value="Calcular" id="m"><div id="oi"></div>
+            <p>
+            <div id="mediam"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
+        <div id="port" class="efeito">
+            <p></p>
+            <br><b id="b1">&nbsp;&nbsp;&nbsp;&nbsp;PORTUGUÊS:</b> AP1: <input type="number" class="caixas"
+                class="caixas" id="p1"> AP2: <input type="number" class="caixas" id="p2"> AP3: <input type="number"
+                class="caixas" id="p3"><input type="button" value="Calcular" onclick="portugues()">
+            <p>
+            <div id="mediap"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="bio" class="efeito"><p></p>
-        <br><b id="b2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOLOGIA:</b> AP1: <input type="number" class="caixas"
-            id="bio1"> AP2: <input type="number" class="caixas" id="bio2"> AP3: <input type="number" class="caixas" id="bio3"><input type="button"
-            value="Calcular" onclick="biologia()">
-        <p>
-            <div id="mediab" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="bio" class="efeito">
+            <p></p>
+            <br><b id="b2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOLOGIA:</b> AP1: <input type="number"
+                class="caixas" id="bio1"> AP2: <input type="number" class="caixas" id="bio2"> AP3: <input type="number"
+                class="caixas" id="bio3"><input type="button" value="Calcular" onclick="biologia()">
+            <p>
+            <div id="mediab"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="geo" class="efeito"><p></p>
-        <br><b id="b3">&nbsp;&nbsp;&nbsp;&nbsp;GEOGRAFIA:</b> AP1: <input type="number" class="caixas" id="g1"> AP2: <input
-            type="number" class="caixas" id="g2"> AP3: <input type="number" class="caixas" id="g3"><input type="button" value="Calcular"
-            onclick="geografia()">
-        <p>
-            <div id="mediag" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="geo" class="efeito">
+            <p></p>
+            <br><b id="b3">&nbsp;&nbsp;&nbsp;&nbsp;GEOGRAFIA:</b> AP1: <input type="number" class="caixas" id="g1"> AP2:
+            <input type="number" class="caixas" id="g2"> AP3: <input type="number" class="caixas" id="g3"><input
+                type="button" value="Calcular" onclick="geografia()">
+            <p>
+            <div id="mediag"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="his" class="efeito"><p></p>
-        <br><b id="b4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTÓRIA:</b> AP1: <input type="number" class="caixas" id="h1">
-        AP2: <input type="number" class="caixas" id="h2"> AP3: <input type="number" class="caixas" id="h3"><input type="button" value="Calcular"
-            onclick="historia()">
-        <p>
-            <div id="mediah" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="his" class="efeito">
+            <p></p>
+            <br><b id="b4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTÓRIA:</b> AP1: <input type="number"
+                class="caixas" id="h1">
+            AP2: <input type="number" class="caixas" id="h2"> AP3: <input type="number" class="caixas" id="h3"><input
+                type="button" value="Calcular" onclick="historia()">
+            <p>
+            <div id="mediah"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="ing" class="efeito"><p></p>
-        <br><b id="b5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INGLÊS:</b> AP1:
-        <input type="number" class="caixas" id="i1"> AP2: <input type="number" class="caixas" id="i2"> AP3: <input type="number" class="caixas" id="i3"><input
-            type="button" value="Calcular" onclick="ingles()">
-        <p>
-            <div id="mediai" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="ing" class="efeito">
+            <p></p>
+            <br><b id="b5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INGLÊS:</b>
+            AP1:
+            <input type="number" class="caixas" id="i1"> AP2: <input type="number" class="caixas" id="i2"> AP3: <input
+                type="number" class="caixas" id="i3"><input type="button" value="Calcular" onclick="ingles()">
+            <p>
+            <div id="mediai"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="esp" class="efeito"><p></p>
-        <br><b id="b6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESPANHOL:</b> AP1: <input type="number" class="caixas" id="e1"> AP2:
-        <input type="number" class="caixas" id="e2"> AP3: <input type="number" class="caixas" id="e3"><input type="button" value="Calcular"
-            onclick="espanhol()">
-        <p>
-            <div id="mediae" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="esp" class="efeito">
+            <p></p>
+            <br><b id="b6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESPANHOL:</b> AP1: <input type="number"
+                class="caixas" id="e1"> AP2:
+            <input type="number" class="caixas" id="e2"> AP3: <input type="number" class="caixas" id="e3"><input
+                type="button" value="Calcular" onclick="espanhol()">
+            <p>
+            <div id="mediae"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="fis" class="efeito"><p></p>
-        <br><b
-            id="b7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FÍSICA:</b>
-        AP1: <input type="number" class="caixas" id="f1"> AP2: <input type="number" class="caixas" id="f2"> AP3: <input type="number" class="caixas" id="f3"><input
-            type="button" value="Calcular" onclick="fisica()">
-        <p>
-            <div id="mediaf" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="fis" class="efeito">
+            <p></p>
+            <br><b
+                id="b7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FÍSICA:</b>
+            AP1: <input type="number" class="caixas" id="f1"> AP2: <input type="number" class="caixas" id="f2"> AP3:
+            <input type="number" class="caixas" id="f3"><input type="button" value="Calcular" onclick="fisica()">
+            <p>
+            <div id="mediaf"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
-        <div id="qui" class="efeito"><p></p>
-        <br><b id="b8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUÍMICA:</b> AP1: <input
-            type="number" class="caixas" id="q1"> AP2: <input type="number" class="caixas" id="q2"> AP3: <input type="number" class="caixas" id="q3"><input
-            type="button" value="Calcular" onclick="quimica()">
-        <p>
-            <div id="mediaq" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
+        <div id="qui" class="efeito">
+            <p></p>
+            <br><b id="b8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUÍMICA:</b> AP1: <input
+                type="number" class="caixas" id="q1"> AP2: <input type="number" class="caixas" id="q2"> AP3: <input
+                type="number" class="caixas" id="q3"><input type="button" value="Calcular" onclick="quimica()">
+            <p>
+            <div id="mediaq"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
 
         <br><br>MATÉRIAS TÉCNICAS<br>
 
-        <div id="sis" class="efeito"><p></p>
-        <br><b id="b9">SISTEMAS OPERACIONAIS:</b> AP1: <input type="number" class="caixas" id="so1"> AP2: <input type="number" class="caixas"
-            id="so2"> AP3: <input type="number" class="caixas" id="so3"><input type="button" value="Calcular"
-            onclick="sistemasoperacionais()">
-        <p>
-            <div id="mediasis" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
-
-        <div id="pw" class="efeito"><p></p>
-        <br><b id="b10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROGRAMAÇÃO WEB:</b> AP1: <input
-            type="number" class="caixas" id="pw1"> AP2: <input type="number" class="caixas" id="pw2"> AP3: <input type="number" class="caixas" id="pw3"><input
-            type="button" value="Calcular" onclick="programacaoweb()">
-        <p>
-            <div id="mediapw" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p></div>
-
-        <div id="rob" class="efeito"><p></p>
-        <br><b id="b11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROBÓTICA:</b> AP1: <input type="number" class="caixas" id="r1"> AP2: <input
-            type="number" class="caixas" id="r2"> AP3: <input type="number" class="caixas" id="r3"><input type="button" value="Calcular"
-            onclick="robotica()">
-        <p>
-            <div id="mediar" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></div>
-        </p>
-        <div id="informacoes">
-            <p>Cor 🔶 = Erro de Informação</p>
-            <p>Cor 🔴 = Média Baixa</p>
-            <p>Cor 📗 = Acima da Média</p>
+        <div id="sis" class="efeito">
+            <p></p>
+            <br><b id="b9">SISTEMAS OPERACIONAIS:</b> AP1: <input type="number" class="caixas" id="so1"> AP2: <input
+                type="number" class="caixas" id="so2"> AP3: <input type="number" class="caixas" id="so3"><input
+                type="button" value="Calcular" onclick="sistemasoperacionais()">
+            <p>
+            <div id="mediasis"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
         </div>
-    </div>
 
-        
+        <div id="pw" class="efeito">
+            <p></p>
+            <br><b id="b10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROGRAMAÇÃO WEB:</b> AP1: <input
+                type="number" class="caixas" id="pw1"> AP2: <input type="number" class="caixas" id="pw2"> AP3: <input
+                type="number" class="caixas" id="pw3"><input type="button" value="Calcular" onclick="programacaoweb()">
+            <p>
+            <div id="mediapw"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+        </div>
+
+        <div id="rob" class="efeito">
+            <p></p>
+            <br><b id="b11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROBÓTICA:</b> AP1: <input type="number" class="caixas"
+                id="r1"> AP2: <input type="number" class="caixas" id="r2"> AP3: <input type="number" class="caixas"
+                id="r3"><input type="button" value="Calcular" onclick="robotica()">
+            <p>
+            <div id="mediar"
+                style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+            </p>
+            <div id="informacoes">
+                <p>Cor 🔶 = Erro de Informação</p>
+                <p>Cor 🔴 = Média Baixa</p>
+                <p>Cor 📗 = Acima da Média</p>
+            </div>
+        </div>
+
+
         <p id="teste"></p>
     </div>
     <br>

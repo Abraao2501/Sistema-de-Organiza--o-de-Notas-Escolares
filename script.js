@@ -1,33 +1,44 @@
 var mediageral = []
 var dados = []
-function info(){
+function info() {
     let nome = document.getElementById('nome')
     let serie = document.getElementById('serie')
     dados.push(nome, serie)
 }
-function matematica() {
-    var txtmat = [document.getElementById("m1"), document.getElementById("m2"), document.getElementById("m3")]
+var selecionarmat = document.getElementById('m')
+selecionarmat.addEventListener('click',
+    function matematica() {
+        var txtmat = [document.getElementById("m1"), document.getElementById("m2"), document.getElementById("m3")]
 
-    var mat = [(Number(txtmat[0].value)), (Number(txtmat[1].value)), (Number(txtmat[2].value))]
+        var mat = [(Number(txtmat[0].value)), (Number(txtmat[1].value)), (Number(txtmat[2].value))]
 
-    let media = (mat[0] + mat[1] + mat[2]) / 3
+        let media = (mat[0] + mat[1] + mat[2]) / 3
 
-    mediageral.push(media)
+        let divmedia = document.getElementById("mediam")
 
-    let divmedia = document.getElementById("mediam")
+        if (txtmat[0].value.length == 0 || txtmat[1].value.length == 0 || txtmat[2].value.length == 0) {
+            divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
+            let quadroorange = document.getElementById('mat').style.backgroundColor = '#ff860b'
+        }
+        else if (media >= 6) {
+            divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)    `
+            let quadrogreen = document.getElementById('mat').style.backgroundColor = '#3eff42'
 
-    if (txtmat[0].value.length == 0 || txtmat[1].value.length == 0 || txtmat[2].value.length == 0) {
-        divmedia.innerHTML = " ERRO! Confira as notas e tente novamente"
-        let quadroorange = document.getElementById('mat').style.backgroundColor = '#ff860b'
-    }
-    else if (media >= 6) {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
-        let quadrogreen = document.getElementById('mat').style.backgroundColor = '#3eff42'
-    } else {
-        divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
-        let quadrored = document.getElementById('mat').style.backgroundColor = '#ff4040'
-    }
-}
+            var elementopai = document.getElementById("mediam")
+            var botao = document.createElement('button')
+            botao.textContent = "Guardar Média"
+            elementopai.appendChild(botao)
+
+            function guardarmedia(){mediageral.push(media)}
+
+            botao.addEventListener('click', guardarmedia)
+
+        } else {
+            divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
+            let quadrored = document.getElementById('mat').style.backgroundColor = '#ff4040'
+            mediageral.push(media)
+        }
+    })
 function portugues() {
 
     var txtport = [document.getElementById("p1"), document.getElementById("p2"), document.getElementById("p3")]
@@ -35,8 +46,6 @@ function portugues() {
     var port = [(Number(txtport[0].value)), (Number(txtport[1].value)), (Number(txtport[2].value))]
 
     let media = (port[0] + port[1] + port[2]) / 3
-
-    mediageral.push(media)
 
     let divmedia = document.getElementById("mediap")
 
@@ -47,9 +56,11 @@ function portugues() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('port').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     } else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('port').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 
 }
@@ -60,7 +71,6 @@ function biologia() {
 
     let media = (bio[0] + bio[1] + bio[2]) / 3
 
-    mediageral.push(media)
 
     let divmedia = document.getElementById("mediab")
 
@@ -71,9 +81,11 @@ function biologia() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('bio').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     } else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('bio').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function geografia() {
@@ -82,8 +94,6 @@ function geografia() {
     var geo = [(Number(txtgeo[0].value)), (Number(txtgeo[1].value)), (Number(txtgeo[2].value))]
 
     let media = (geo[0] + geo[1] + geo[2]) / 3
-
-    mediageral.push(media)
 
     let divmedia = document.getElementById("mediag")
 
@@ -94,9 +104,11 @@ function geografia() {
     else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('geo').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     } else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('geo').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function historia() {
@@ -106,8 +118,6 @@ function historia() {
 
     let media = (his[0] + his[1] + his[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediah")
 
     if (txthis[0].value.length == 0 || txthis[1].value.length == 0 || txthis[2].value.length == 0) {
@@ -116,9 +126,12 @@ function historia() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('his').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
+
     } else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('his').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function ingles() {
@@ -128,8 +141,6 @@ function ingles() {
 
     let media = (ing[0] + ing[1] + ing[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediai")
 
     if (txting[0].value.length == 0 || txting[1].value.length == 0 || txting[2].value.length == 0) {
@@ -138,10 +149,12 @@ function ingles() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('ing').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('ing').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function espanhol() {
@@ -151,8 +164,6 @@ function espanhol() {
 
     let media = (esp[0] + esp[1] + esp[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediae")
 
     if (txtesp[0].value.length == 0 || txtesp[1].value.length == 0 || txtesp[2].value.length == 0) {
@@ -161,10 +172,12 @@ function espanhol() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('esp').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('esp').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function fisica() {
@@ -174,8 +187,6 @@ function fisica() {
 
     let media = (fis[0] + fis[1] + fis[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediaf")
 
     if (txtfis[0].value.length == 0 || txtfis[1].value.length == 0 || txtfis[2].value.length == 0) {
@@ -184,10 +195,12 @@ function fisica() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('fis').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('fis').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function quimica() {
@@ -197,8 +210,6 @@ function quimica() {
 
     let media = (qui[0] + qui[1] + qui[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediaq")
 
     if (txtqui[0].value.length == 0 || txtqui[1].value.length == 0 || txtqui[2].value.length == 0) {
@@ -207,10 +218,12 @@ function quimica() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('qui').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('qui').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function sistemasoperacionais() {
@@ -220,8 +233,6 @@ function sistemasoperacionais() {
 
     let media = (so[0] + so[1] + so[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediasis")
 
     if (txtso[0].value.length == 0 || txtso[1].value.length == 0 || txtso[2].value.length == 0) {
@@ -230,10 +241,12 @@ function sistemasoperacionais() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('sis').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('sis').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function programacaoweb() {
@@ -243,8 +256,6 @@ function programacaoweb() {
 
     let media = (pw[0] + pw[1] + pw[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediapw")
 
     if (txtpw[0].value.length == 0 || txtpw[1].value.length == 0 || txtpw[2].value.length == 0) {
@@ -253,10 +264,12 @@ function programacaoweb() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('pw').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('pw').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
 function robotica() {
@@ -266,8 +279,6 @@ function robotica() {
 
     let media = (r[0] + r[1] + r[2]) / 3
 
-    mediageral.push(media)
-
     let divmedia = document.getElementById("mediar")
 
     if (txtr[0].value.length == 0 || txtr[1].value.length == 0 || txtr[2].value.length == 0) {
@@ -276,32 +287,34 @@ function robotica() {
     } else if (media >= 6) {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :)`
         let quadrogreen = document.getElementById('rob').style.backgroundColor = '#3eff42'
+        mediageral.push(media)
     }
     else {
         divmedia.innerHTML = `Sua média é ${media.toFixed(1)} :(`
         let quadrored = document.getElementById('rob').style.backgroundColor = '#ff4040'
+        mediageral.push(media)
     }
 }
-function testmedia(){
-    if(typeof mediageral[1,2,3,4,5,6,7,8,9,10,11] == 'undefined' || serie.value < 1){
+function testmedia() {
+    if (typeof mediageral[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] == 'undefined' || serie.value < 1) {
         alert('Erro, verifique as informações!')
     }
-    else{
-    alert(mediageral)
-    var total = 0
-    for(var i = 0; i < mediageral.length; i++) {
-    total += mediageral[i]
-}
-    var avg = total / mediageral.length
-    var teste = document.getElementById('teste')
-    if(avg<6){
-        teste.innerHTML = `Você deve se esforçar mais ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
-        teste.style.backgroundColor = 'rgba(211, 52, 52, 0.856)'
+    else {
+        alert(mediageral)
+        var total = 0
+        for (var i = 0; i < mediageral.length; i++) {
+            total += mediageral[i]
+        }
+        var avg = total / mediageral.length
+        var teste = document.getElementById('teste')
+        if (avg < 6) {
+            teste.innerHTML = `Você deve se esforçar mais ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
+            teste.style.backgroundColor = 'rgba(211, 52, 52, 0.856)'
+        }
+        else {
+            teste.innerHTML = `Parabéns ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
+            teste.style.backgroundColor = 'green'
+        }
     }
-    else{
-        teste.innerHTML = `Parabéns ${nome.value}, sua média geral é : ${avg.toFixed(2)}`
-        teste.style.backgroundColor = 'green'
-    }
-}
-mediageral.length=0
+    mediageral.length = 0
 }
